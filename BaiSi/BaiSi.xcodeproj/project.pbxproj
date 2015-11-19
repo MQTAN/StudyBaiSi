@@ -41,6 +41,10 @@
 		18433A511BFDB6AD0011FDE9 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A2D1BFDB6AD0011FDE9 /* SDCollectionViewCell.m */; };
 		18433A521BFDB6AD0011FDE9 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A2F1BFDB6AD0011FDE9 /* SDCycleScrollView.m */; };
 		18433A531BFDB6AD0011FDE9 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A311BFDB6AD0011FDE9 /* UIView+SDExtension.m */; };
+		18433A561BFDBDED0011FDE9 /* MQFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A551BFDBDED0011FDE9 /* MQFooterView.m */; };
+		18433A5C1BFDC1E30011FDE9 /* MQSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A5B1BFDC1E30011FDE9 /* MQSquare.m */; };
+		18433A651BFDCAED0011FDE9 /* NSObject+MQExtensionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A641BFDCAED0011FDE9 /* NSObject+MQExtensionTool.m */; };
+		18433A681BFDD2AB0011FDE9 /* MQMeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18433A671BFDD2AB0011FDE9 /* MQMeButton.m */; };
 		18BCD4871BFD7030005D1AB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BCD4861BFD7030005D1AB4 /* main.m */; };
 		18BCD4901BFD7030005D1AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BCD48E1BFD7030005D1AB4 /* Main.storyboard */; };
 		18BCD4931BFD7030005D1AB4 /* BaiSi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18BCD4911BFD7030005D1AB4 /* BaiSi.xcdatamodeld */; };
@@ -132,6 +136,14 @@
 		18433A2F1BFDB6AD0011FDE9 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		18433A301BFDB6AD0011FDE9 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		18433A311BFDB6AD0011FDE9 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		18433A541BFDBDED0011FDE9 /* MQFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQFooterView.h; sourceTree = "<group>"; };
+		18433A551BFDBDED0011FDE9 /* MQFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQFooterView.m; sourceTree = "<group>"; };
+		18433A5A1BFDC1E30011FDE9 /* MQSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSquare.h; sourceTree = "<group>"; };
+		18433A5B1BFDC1E30011FDE9 /* MQSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSquare.m; sourceTree = "<group>"; };
+		18433A631BFDCAED0011FDE9 /* NSObject+MQExtensionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MQExtensionTool.h"; sourceTree = "<group>"; };
+		18433A641BFDCAED0011FDE9 /* NSObject+MQExtensionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MQExtensionTool.m"; sourceTree = "<group>"; };
+		18433A661BFDD2AB0011FDE9 /* MQMeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQMeButton.h; sourceTree = "<group>"; };
+		18433A671BFDD2AB0011FDE9 /* MQMeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQMeButton.m; sourceTree = "<group>"; };
 		18BCD4821BFD7030005D1AB4 /* BaiSi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BCD4861BFD7030005D1AB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18BCD48F1BFD7030005D1AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -242,6 +254,8 @@
 		184339E31BFDB6AC0011FDE9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18433A5A1BFDC1E30011FDE9 /* MQSquare.h */,
+				18433A5B1BFDC1E30011FDE9 /* MQSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +265,10 @@
 			children = (
 				184339E51BFDB6AC0011FDE9 /* MQMeTableViewCell.h */,
 				184339E61BFDB6AC0011FDE9 /* MQMeTableViewCell.m */,
+				18433A541BFDBDED0011FDE9 /* MQFooterView.h */,
+				18433A551BFDBDED0011FDE9 /* MQFooterView.m */,
+				18433A661BFDD2AB0011FDE9 /* MQMeButton.h */,
+				18433A671BFDD2AB0011FDE9 /* MQMeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +283,8 @@
 				184339FC1BFDB6AC0011FDE9 /* MQConst.m */,
 				184339FD1BFDB6AC0011FDE9 /* MQHTTPTool.h */,
 				184339FE1BFDB6AC0011FDE9 /* MQHTTPTool.m */,
+				18433A631BFDCAED0011FDE9 /* NSObject+MQExtensionTool.h */,
+				18433A641BFDCAED0011FDE9 /* NSObject+MQExtensionTool.m */,
 				184339FF1BFDB6AC0011FDE9 /* PrefixHeader.pch */,
 				18433A001BFDB6AC0011FDE9 /* View */,
 				18433A031BFDB6AD0011FDE9 /* ViewController.h */,
@@ -768,16 +788,20 @@
 				18433A3A1BFDB6AD0011FDE9 /* UIBarButtonItem+MQExtension.m in Sources */,
 				18BCD4931BFD7030005D1AB4 /* BaiSi.xcdatamodeld in Sources */,
 				18433A411BFDB6AD0011FDE9 /* MQHTTPTool.m in Sources */,
+				18433A5C1BFDC1E30011FDE9 /* MQSquare.m in Sources */,
 				18433A371BFDB6AD0011FDE9 /* AppDelegate.m in Sources */,
 				18433A3B1BFDB6AD0011FDE9 /* UIImage+MQExtension.m in Sources */,
 				18BCD4871BFD7030005D1AB4 /* main.m in Sources */,
+				18433A651BFDCAED0011FDE9 /* NSObject+MQExtensionTool.m in Sources */,
 				18433A441BFDB6AD0011FDE9 /* MQPublishViewController.m in Sources */,
 				18433A321BFDB6AD0011FDE9 /* MQNavigationController.m in Sources */,
 				18433A431BFDB6AD0011FDE9 /* ViewController.m in Sources */,
+				18433A561BFDBDED0011FDE9 /* MQFooterView.m in Sources */,
 				18433A381BFDB6AD0011FDE9 /* NSDate+MQExtension.m in Sources */,
 				18433A3E1BFDB6AD0011FDE9 /* UITextField+MQExtension.m in Sources */,
 				18433A401BFDB6AD0011FDE9 /* MQConst.m in Sources */,
 				18433A511BFDB6AD0011FDE9 /* SDCollectionViewCell.m in Sources */,
+				18433A681BFDD2AB0011FDE9 /* MQMeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,11 +942,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = BaiSi/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DuoDi.BaiSi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BaiSi/Classes/Me_我/View/BaiSi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -932,11 +959,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = BaiSi/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DuoDi.BaiSi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BaiSi/Classes/Me_我/View/BaiSi-Bridging-Header.h";
 			};
 			name = Release;
 		};

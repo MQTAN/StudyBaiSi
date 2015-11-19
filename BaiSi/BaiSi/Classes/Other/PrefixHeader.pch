@@ -11,10 +11,10 @@
 #import "UIView+MQExtension.h"
 #import "UIBarButtonItem+MQExtension.h"
 #import "MQConst.h"
-
+#import "MQHTTPTool.h"
 
 #import <Masonry.h>
-#import <MJExtension.h>
+#import "NSObject+MQExtensionTool.h"
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
 
@@ -26,14 +26,15 @@
 
 // 日志输出
 #ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
-#define MQLog(...) NSLog(@"\n方法 :%s 行: %zd\n[ %@ ]\n\n",__FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__]);//NSLog(__VA_ARGS__)
+#define MQLog(...)  NSLog(__VA_ARGS__)
+/*NSLog(@"\n方法 :%s 行: %zd\n[ %@ ]\n\n",__FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__]);*/
 #else // 发布阶段-上线阶段:移除Log
 #define MQLog(...)
 #endif
 
 // 方法输出
 #define MQLogFunc MQLog(@"%s", __func__);
-
+#define MQLogLine(...) MQLog(@"\n方法 :%s 行: %zd\n[ %@ ]\n\n",__FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__]);
 // 颜色
 #define MQARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 #define MQColor(r, g, b) MQARGBColor(255, (r), (g), (b))

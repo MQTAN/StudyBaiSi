@@ -8,6 +8,7 @@
 
 #import "MQMeViewController.h"
 #import "MQMeTableViewCell.h"
+#import "MQFooterView.h"
 @interface MQMeViewController ()
 #pragma mark- tableview不能分组的原因,一定是创建tableview的时候就要设定分组样式..否则没有效果
 @end
@@ -44,7 +45,7 @@ static NSString *const MQMeCellID = @"meCell";
     
     //设置footerView
 #warning 因为通过如此创建的footerView.无法得到它的Frame.所以在之后要给定它的Frame.否则,添加在它上面的子控件根本无法接受点击事件.
-//    self.tableView.tableFooterView = [[MQMeFooterView alloc] init];
+    self.tableView.tableFooterView = [[MQFooterView alloc] init];
 }
 #pragma mark-有点按钮点击事件
 - (void)settingClick{
