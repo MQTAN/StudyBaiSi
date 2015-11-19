@@ -8,8 +8,10 @@
 
 #import "MQTagViewController.h"
 #import "SDCycleScrollView.h"
+#import "MQNavigationController.h"
+#import "MJRefresh.h"
 
-@interface MQTagViewController ()<SDCycleScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MQTagViewController ()<SDCycleScrollViewDelegate, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate>
 /**tableView测试*/
 @property(nonatomic, weak) UITableView *tableView;
 
@@ -18,6 +20,9 @@
 
 /**包装tableview的scrollview*/
 @property(nonatomic, strong) UIScrollView *scrollview;
+
+/**webview*/
+@property(nonatomic, weak) UIWebView *webview;
 
 @end
 
@@ -64,10 +69,13 @@
     tableView.dataSource = self;
     self.tableView = tableView;
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self.scrollview addSubview:tableView];
+    [self.view addSubview:tableView];
     tableView.directionalLockEnabled = YES;
 //    tableView.tableHeaderView = self.cycleScrollView;
     tableView.frame = self.view.bounds;
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 #pragma mark - <SDCycleScrollViewDelegate>
@@ -89,6 +97,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%zd", indexPath.row];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"加载网页,奇艺高清视频网";
+    }
     return cell;
 }
 
@@ -108,6 +119,29 @@
     MQLog(@"点击了tableview的cell");
     if (indexPath.row == 0) {
         MQLog(@"%zd", indexPath.row);
+        
+#pragma mark webviewe播放网络视频
+        UIViewController *webviewVC = [[UIViewController alloc] init];
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        
+        self.webview = webview;
+        webviewVC.title = @"奇艺视频";
+        webview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        //    NSURL *url = [NSURL URLWithString:@"http://v.youku.com/v_show/id_XMTIyODAwMzUy.html"];
+        NSURL *url = [NSURL URLWithString:@"http://www.iqiyi.com/v_19rrkdx3p8.html"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        [webview setDelegate:self];
+        
+        [webview loadRequest:request];
+        [webviewVC.view addSubview:webview];
+        [self.navigationController pushViewController:webviewVC animated:YES];
+        //做了横屏和竖屏适配.
+        
+        [webview mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(webview.superview);
+        }];
+        
         
     }
 }
