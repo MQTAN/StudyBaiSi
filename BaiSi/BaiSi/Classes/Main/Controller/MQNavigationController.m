@@ -15,6 +15,8 @@
 @implementation MQNavigationController
 + (void)initialize{
     /** 设置UINavigationBar */
+    
+    MQLog(@"+++++");
     UINavigationBar *bar = [UINavigationBar appearance];
     // 设置背景
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
