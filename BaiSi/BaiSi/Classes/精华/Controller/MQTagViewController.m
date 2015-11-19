@@ -72,7 +72,7 @@
 
 #pragma mark - <SDCycleScrollViewDelegate>
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    MQLog(@"点击了%zd", index);
+   
 }
 #pragma mark- tableview 的数据源方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
