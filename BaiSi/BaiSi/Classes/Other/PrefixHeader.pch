@@ -10,13 +10,17 @@
 #define PrefixHeader_pch
 #import "UIView+MQExtension.h"
 #import "UIBarButtonItem+MQExtension.h"
-
+#import "MQConst.h"
 
 
 #import <Masonry.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
+
+
+//block 中的weak变量
+#define MQWeakSelf __weak typeof(self) weakSelf = self;
 
 
 
