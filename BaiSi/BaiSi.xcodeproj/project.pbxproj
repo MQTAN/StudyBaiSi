@@ -267,7 +267,6 @@
 				18BCD4C81BFD7064005D1AB4 /* AppDelegate.m */,
 				18BCD4C91BFD7064005D1AB4 /* Category */,
 				18BCD4CC1BFD7064005D1AB4 /* Controller */,
-				18BCD4CD1BFD7064005D1AB4 /* Lib */,
 				18BCD4D01BFD7064005D1AB4 /* Model */,
 				18BCD4D11BFD7064005D1AB4 /* MQHTTPTool.h */,
 				18BCD4D21BFD7064005D1AB4 /* MQHTTPTool.m */,
@@ -293,29 +292,6 @@
 			children = (
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		18BCD4CD1BFD7064005D1AB4 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				18BCD4CE1BFD7064005D1AB4 /* SDCycleScrollView */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		18BCD4CE1BFD7064005D1AB4 /* SDCycleScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				18BCD4CF1BFD7064005D1AB4 /* PageControl */,
-			);
-			path = SDCycleScrollView;
-			sourceTree = "<group>";
-		};
-		18BCD4CF1BFD7064005D1AB4 /* PageControl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PageControl;
 			sourceTree = "<group>";
 		};
 		18BCD4D01BFD7064005D1AB4 /* Model */ = {
@@ -936,6 +912,7 @@
 			baseConfigurationReference = 4523C73A19CE4ABF4CFAF2F9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = BaiSi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DuoDi.BaiSi;
@@ -948,6 +925,7 @@
 			baseConfigurationReference = 5E64456CEDFFF009C33D860D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = BaiSi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DuoDi.BaiSi;
