@@ -62,6 +62,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTableView];
+    self.title = @"标签页学习";
+    
 }
 - (void)setTableView{
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -100,6 +102,10 @@
     if (indexPath.row == 0) {
         cell.textLabel.text = @"加载网页,奇艺高清视频网";
     }
+    if (indexPath.row == 1) {
+        cell.textLabel.text = @"加载标签页";
+    }
+    
     return cell;
 }
 
@@ -122,6 +128,7 @@
         
 #pragma mark webviewe播放网络视频
         UIViewController *webviewVC = [[UIViewController alloc] init];
+        webviewVC.title = @"奇艺网页显示";
         UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
         
         self.webview = webview;
@@ -143,6 +150,9 @@
         }];
         
         
+    }
+    if (indexPath.row == 1) {
+        //添加标签页
     }
 }
 @end

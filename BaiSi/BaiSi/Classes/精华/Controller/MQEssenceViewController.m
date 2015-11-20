@@ -31,11 +31,7 @@
     UIViewController *VC = [[MQTagViewController alloc] init];
     VC.view.backgroundColor = MQRandomColor;
     //导航控制器能够push到下一个控制器
-    [self.navigationController pushViewController:VC animated:YES];
-//    [VC.view mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(VC.view.superview);
-//    }];
-}
+    [self.navigationController pushViewController:VC animated:YES];}
 
 
 @end

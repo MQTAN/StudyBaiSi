@@ -9,6 +9,7 @@
 #import "MQFooterView.h"
 #import "MQSquare.h"
 #import "MQMeButton.h"
+#import "MQWebViewController.h"
 
 static NSUInteger const MQColsCount = 4;
 @implementation MQFooterView
@@ -51,16 +52,41 @@ static NSUInteger const MQColsCount = 4;
         
         
         button.square = squares[i];
+        
+        //添加点击事件
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     }
 #pragma mark- 这是一个公式,(总个数 + 每行个数 - 1) / 每行个数 == 多少行;
     NSUInteger rowsCount = (count + colsCount - 1) / colsCount;
     self.height = rowsCount * btnH;
+    
+#warning 这里一定是要这样舍子tableview的footerView的..否则回到这个页面的时候不能滚动到指定的位置
+//TODO: 这里一定是要这样舍子tableview的footerView的..否则回到这个页面的时候不能滚动到指定的位置.
+    
     //这里是重新刷新tableview的高度. 思想.,,,,刷新父控件的高度.....
     UITableView *tableView = (UITableView *)self.superview;
-    tableView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
+    tableView.tableFooterView = self;
+    
+    
+//    tableView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
+}
+
+- (void)buttonClick:(MQMeButton *)button{
+    if ([button.square.url hasPrefix:@"http:"]) {
+        MQWebViewController *webVC = [[MQWebViewController alloc] init];
+        webVC.square = button.square;
+        //取出当前选中的导航控制器
+        MQLogLine(@"%@", self.window.rootViewController);
+//        MQLogLine(@"%@", self.window.rootViewController selecte)
+        
+        UITabBarController *tabBarVC = (UITabBarController *)self.window.rootViewController;
+        UINavigationController *currentNavVC = tabBarVC.selectedViewController;
+        MQLogLine(@"navVC = %@", tabBarVC.selectedViewController);
+        [currentNavVC pushViewController:webVC animated:YES];
+    }
 }
 @end

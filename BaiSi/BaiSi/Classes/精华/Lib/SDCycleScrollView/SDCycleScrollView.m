@@ -318,10 +318,8 @@ NSString * const ID = @"cycleCell";
     
     _flowLayout.itemSize = self.frame.size;
     
-//    _mainView.frame = self.bounds;
-    [_mainView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(_mainView.superview);
-    }];
+    _mainView.frame = self.bounds;
+    
     if (_mainView.contentOffset.x == 0 &&  _totalItemsCount) {
         int targetIndex = 0;
         if (self.infiniteLoop) {

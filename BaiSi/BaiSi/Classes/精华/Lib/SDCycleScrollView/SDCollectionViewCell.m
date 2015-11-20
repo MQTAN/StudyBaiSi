@@ -84,10 +84,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.imageView.superview);
-    }];
-//    _imageView.frame = self.bounds;
+    _imageView.frame = self.bounds;
     
     CGFloat titleLabelW = self.sd_width;
     CGFloat titleLabelH = _titleLabelHeight;
